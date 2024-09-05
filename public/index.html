@@ -4,9 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Personal Budget</title>
-    <!-- This is an SEO Change -->
+    <!-- This is an SEO Change (Better Description)-->
     <meta name="description" content="App that has been made to easily budget your finances. It's helps you stay on track so that you can get the results you're looking for. ">
-    <!-- This is an SEO Change -->
+    <!-- This is an SEO Change (Better keywords)-->
     <meta name="keywords" content="app free budget finance personal easy safe alerts management">
     <link rel="stylesheet" href="reset.css">
     <link rel="stylesheet" href="main.css">
@@ -15,14 +15,15 @@
 
 <a href="#main" class="skip">Skip to content</a>
 
-    <!-- This is a Semantic HTML Change -->
-    <header>
-        <nav>
+    <!-- This is a Semantic HTML Change (Header)-->
+    <header role="banner"> <!-- This is an A11y Change (Role) -->
+        <nav role="nav">
             <ul>
-                <li><a href="/">Home</a></li>
-                <li><a href="/about.html">About</a></li>
-                <li><a href="/login.html">Login</a></li>
-                <li><a href="https://google.com">Google</a></li>
+                <!-- This is an A11y Change (aria-label)-->
+                <li><a href="/" aria-label="Home page">Home</a></li>
+                <li><a href="/about.html" aria-label="About Us">About</a></li>
+                <li><a href="/login.html" aria-label="Login here">Login</a></li>
+                <li><a href="https://google.com" aria-label="Search">Google</a></li>
             </ul>
         </nav>
     </header>
@@ -34,6 +35,9 @@
     </div>
 
     <main class="center" id="main">
+
+        <!-- This is an SEO Change (Header)-->
+        <h1>Info</h1>
 
         <div class="page-area">
 
@@ -94,11 +98,11 @@
                 </p>
             </article>
     
-            <!-- This is a Semantic HTML Change -->
+            <!-- This is a Semantic HTML Change (Aside)-->
             <aside>
                 <h1>Chart</h1>
                 <p>
-                    <!-- This is an SEO Change -->
+                    <!-- This is an A11y Change (alt) -->
                     <canvas id="myChart" width="400" height="400" alt="Budget Chart"></canvas>
                 </p>
             </aside>
@@ -108,7 +112,7 @@
     </main>
 
     <footer class="bottom">
-        <!-- This is a Semantic HTML Change -->
+        <!-- This is a Semantic HTML Change (section) -->
         <section class="center">
             All rights reserved &copy; Fabio Nolasco
         </section>
