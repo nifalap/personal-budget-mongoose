@@ -2,28 +2,11 @@
 
 const express = require('express');
 const cors = require('cors');
+const fs = require('fs'); 
 const app = express();
 const port = 3000;
 
 app.use(cors());
-
-const budget = {
-    myBudget: [
-        {
-            title: 'Eat out',
-            budget: 25
-        },
-        {
-            title: 'Rent',
-            budget: 375
-        },
-        {
-            title: 'Grocery',
-            budget: 110
-        },
-    ]
-};
-
 
 app.use('/', express.static('public'));
 
@@ -32,7 +15,10 @@ app.get('/hello', (req, res) => {
 });
 
 app.get('/budget', (req, res) => {
-    res.json(budget);
+    fs.readFile('chart.json', 'utf8', (err, data) => {
+        const budget = JSON.parse(data); //convert to js obj
+        res.json(budget);
+    });
 });
 
 app.listen(port, () => {
